@@ -4,7 +4,8 @@ export default class Details extends Component {
   render() {
     return (
       <div>
-        hello fromo details.
+        hello from details application
+        <span className="caret"> </span>
       </div>
     )
   }

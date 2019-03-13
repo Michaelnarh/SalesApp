@@ -1,18 +1,19 @@
 import React from 'react'
 
-export default function Title({name,title}) {
+export default function Title({me,u}) {
   return (
       <>
-        <div>
-            <div className="col-10 mx-auto ">
-             <h1>
-                <strong className="display-5">
-                    {name}
-                </strong>
-                <sub>{title} </sub>
-             </h1>
-            </div>
-        </div>
+       <div className = "container" >
+      <div className="row headme text-center" >
+          <div className="col-md-6">
+              {me}
+          </div>
+          <div className="col-md-6 ">
+          {u}
+          </div> 
+           </div>
+      </div>
+    
     </>
   )
 }
