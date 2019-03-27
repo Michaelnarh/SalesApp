@@ -7,19 +7,19 @@ class ProductProvider extends Component {
   state={
     product:[],
     detailProduct:detailProduct,
-  }
+  };
   
   componentDidMount(){
     this.setProduct();
-}
-  setProduct=()=>{
-    let TempProduct=[];
+};
+  setProduct = () =>{
+    let tempProduct=[];
     StoreProduct.forEach(item=> {
-      const singleItem=[...item]
-      TempProduct=[...TempProduct,singleItem]
+       const singleItem ={...item}
+      tempProduct=[...tempProduct,singleItem]
     });
     this.setState(()=>{
-           return{product:TempProduct}
+           return{product:tempProduct}
     });
   };
   
@@ -34,7 +34,7 @@ class ProductProvider extends Component {
       return (
 
       <ProductContext.Provider value={{
-        // ...this.state,
+        ...this.state,
         // handleDetail:this.handleDetail,
         // addToCart:this.addToCart
 

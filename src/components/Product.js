@@ -94,3 +94,11 @@ display:wrap-content;
 
   }
 `;
+
+const bButton=styled.div`
+background:tranparent;
+border-radius:2px;
+broder:1px dotted;
+padding:3px;
+
+`
