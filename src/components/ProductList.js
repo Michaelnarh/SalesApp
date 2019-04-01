@@ -12,7 +12,8 @@ export default class ProductList extends Component {
     <Title me="OUR" u="PRODUCTS"/>
           
       <div className="row"> 
-        <div className="text-dark mx-4">
+          <div>
+            <div className="text-dark mx-4">
            <ProductConsumer>  
              {  (value)=>{
                return value.product.map(product=>{
@@ -21,6 +22,8 @@ export default class ProductList extends Component {
              }}
            </ProductConsumer>
         </div>
+
+          </div>
       </div>  
          
       </>

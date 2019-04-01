@@ -6,6 +6,7 @@ import ProductList from "./components/ProductList"
 import Default from "./components/Default"
 import Cart from "./components/Cart"
 import Details from "./components/Details" 
+import Model from "./components/Model"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './App.css';
@@ -22,9 +23,8 @@ class App extends Component {
         <Route path="/details" component= {Details}/>
         <Route path="/cart" component= {Cart}/>
         <Route  component= {Default}/>
-          
        </Switch>
-      
+      <Model/>
       </>
     );
   }

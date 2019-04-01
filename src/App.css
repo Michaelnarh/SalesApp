@@ -1,9 +1,10 @@
 :root{
   --mainBlue:hsl(240, 46%, 31%);
   --lightBlue:#45b3eb;
-  --mainwhite:rgb(248, 248, 247);
+  --mainWhite:rgb(248, 248, 247);
   --mainDark:rgb(23,33,3);
   --mainYellow:rgb(216, 226, 75);
+  --mainOrange:rgba(230, 131, 18, 0.87); 
 }
 .App {
   text-align: center;
@@ -34,4 +35,13 @@ body{
   word-spacing: 1.3rem
 
 
-}  
+} 
+.Textformat{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  text-transform: capitalize;
+  font-size:1.2rem;
+  color:var(var(--mainDark));
+
+
+} 

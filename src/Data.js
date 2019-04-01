@@ -13,7 +13,7 @@ export const StoreProduct=[
     },
     {
         id: 2,
-        name:"Sumsung Note-5",
+        name:"Sumsung Galaxy-s4",
         img:"/images/second.jpg",
         company:"Sumsug-Company",
         info:
@@ -33,7 +33,7 @@ export const StoreProduct=[
          price:12,
         inCart:false,
         count:0,
-        total:"10",
+        total:0,
     },
     {
         id: 4,
@@ -56,7 +56,7 @@ export const StoreProduct=[
         info:
          "The phone was produced by the sumsumg compan which has the lastest features all users are going to love beyond all imagination and prouduction limit", 
          price:12,
-        inCart:true,
+        inCart:false,
         count:0,
         total:0,
     },
@@ -89,7 +89,7 @@ export const StoreProduct=[
            company: "Sumsug-Company",
            info: "The phone was produced by the sumsumg compan which has the lastest features all users are going to love beyond all imagination and prouduction limit",
            price: 12,
-           inCart: true,
+           inCart: false ,
            count: 0,
            total: 0,
        },
@@ -100,7 +100,7 @@ export const StoreProduct=[
             company: "Sumsug-Company",
             info: "The phone was produced by the sumsumg compan which has the lastest features all users are going to love beyond all imagination and prouduction limit",
             price: 12,
-            inCart: true,
+            inCart: false,
             count: 0,
             total: 0,
         },
@@ -112,7 +112,7 @@ export const StoreProduct=[
              company: "Sumsug-Company",
              info: "The phone was produced by the sumsumg compan which has the lastest features all users are going to love beyond all imagination and prouduction limit",
              price: 12,
-             inCart: true,
+             inCart:false,
              count: 0,
              total: 0,
     }
