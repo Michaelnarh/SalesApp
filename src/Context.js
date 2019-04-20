@@ -64,6 +64,21 @@ class ProductProvider extends Component {
       return{ openModal:false};
      })
    }
+   increment=(id)=>{
+     console.log("increase")
+   }
+    decrement = (id) => {
+      console.log("decrease")
+    }
+     
+    removeItem= (id) => {
+       console.log("remove")
+     }
+   clearCart = (id) => {
+     console.log("clear")
+   }
+
+
   render(){
     
       return (
@@ -74,6 +89,11 @@ class ProductProvider extends Component {
         addToCart:this.addToCart,
         openModal:this.openModal,
         closeModal:this.closeModal,
+        increment:this.increment,
+        decrement:this.decrement,
+        removeItem:this.removeItem,
+        clearCart:this.clearCart
+
 
 
       }}>

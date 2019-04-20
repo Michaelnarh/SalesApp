@@ -18,7 +18,7 @@ display:wrap-content;
     box-shadow:1px 1px 3px rgba(0,0,0,0.2);
   }
   .card-footer{
-    background:rgba(147,277,247);
+    background:rgba(127,277,247);
   }
 }
 .img-container:hover .card-img-top {
@@ -30,7 +30,7 @@ display:wrap-content;
     bottom:0;
     right:0;
     padding:0.2rem 0.4rem
-    background:var(--mainBlue);
+    background:var(--mainOrange);
     margin-left:10em;
     margin-bottom:2em; 
     color:var(--mainwhite);

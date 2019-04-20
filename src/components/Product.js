@@ -9,39 +9,41 @@ export default class Product extends Component {
    const{id,img ,name,inCart,price}=this.props.product
     return (
      <>
-    <div className="col-10 col-md-5 col-lg-3 mx-auto my-2">
-     <Twrapper >
-       <div className="card">
-       <ProductConsumer>
-         {(value)=>(
-           <div className="img-container py-2 "
-            onClick=
-            {()=>{value.handleDetail(id);
-                   value.openModal(id);
-            }}
-           >
-                <Link to="/details">
-                <img src={img} className="card-img-top p-5" alt="product"/>
+     <div className="row">
+    <div className="col-10 mx-auto col-lg-2  my-2">
+            <Twrapper >
+              <div className="card">
+              <ProductConsumer>
+                {(value)=>(
+                  <div className="img-container py-2 "
+                    onClick=
+                    {()=>{value.handleDetail(id);
+                          value.openModal(id);
+                    }}
+                  >
+                        <Link to="/details">
+                        <img src={img} className="card-img-top p-5" alt="product"/>
 
-                </Link>
-                <button className="btn cart-btn" disabled={inCart? true:false} onClick=
-                {()=>{value.addToCart(id);
-                       value.openModal(id);
-                }}>
-                  {inCart? (<i className="fa fa-shopping-basket " disabled></i>):(<i className="fa fa-cart-plus" disabled></i>)}
-                </button>
-            </div>
-         )}
-            
-          </ProductConsumer>
-          <div className="card-footer d-flex justify-content-between">
-           <p className="self-align-center">{name}</p> 
-           <h4 className="self-align-end font-italic text-dark">
-          <span className="mr-1">$</span>
-            {price}</h4>
-          </div>
-      </div>
-     </Twrapper>
+                        </Link>
+                        <button className="btn cart-btn" disabled={inCart? true:false} onClick=
+                        {()=>{value.addToCart(id);
+                              value.openModal(id);
+                        }}>
+                          {inCart? (<i className="fa fa-shopping-basket " disabled></i>):(<i className="fa fa-cart-plus" disabled></i>)}
+                        </button>
+                    </div>
+                )}
+                    
+                  </ProductConsumer>
+                  <div className="card-footer d-flex justify-content-between">
+                  <p className="self-align-center">{name}</p> 
+                  <h4 className="self-align-end font-italic text-dark">
+                  <span className="mr-1">$</span>
+                    {price}</h4>
+                  </div>
+              </div>
+            </Twrapper>
+     </div>
      </div>
      </>
     )

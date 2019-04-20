@@ -4,7 +4,8 @@
   --mainWhite:rgb(248, 248, 247);
   --mainDark:rgb(23,33,3);
   --mainYellow:rgb(216, 226, 75);
-  --mainOrange:rgba(230, 131, 18, 0.87); 
+  --mainOrange:rgba(235, 96, 53, 0.938); 
+  --mainRed:rgb(218, 34, 43);
 }
 .App {
   text-align: center;
@@ -12,7 +13,9 @@
 body{
   color:var(--mainDark)!important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-  background-color:var(--mainwhite) !important;
+  /* background-color:var(--mainYellow) !important; */
+ background-blend-mode:normal;
+ background-image: linear-gradient(to right,var(--mainBlue),var(--lightBlue))
 } 
 .navme{
   opacity: 0.8px;
@@ -20,7 +23,7 @@ body{
 
 } 
 .headme{
-  max-resolution: top 1.8rem;
+  /* max-resolution: top 1.8rem; */
   text-align: end;
   text-emphasis:bold;
   word-spacing: monospace;

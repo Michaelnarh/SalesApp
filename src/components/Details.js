@@ -20,11 +20,12 @@ export default class Details extends Component {
                   </div>
 
                 <div className="row">
-                 <div className=" col-md-6 mx-auto my-2">
+                 <div className="col-10 col-md-6 mx-auto my-2">
                      <div className="card">
                          <img src={img} className="img-fluid" alt="product"/>
                      </div> 
-                     <div className= "card-footer">
+                 <div className=" col-10 col-md-6 mx-auto my-2">  
+                     {/* <div className= "card-footer"> */}
                        <div className = " Textformat mx-auto " >
                             < label >Made By : </label><strong className="ml-4">{company}</strong >
                         </div>
