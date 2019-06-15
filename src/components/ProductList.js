@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Product from "./Product"
 import Title from "./Title"
-import {StoreProduct} from '../Data'
+// import {StoreProduct} from '../Data'
 import {ProductConsumer} from "../Context"
 
 export default class ProductList extends Component {

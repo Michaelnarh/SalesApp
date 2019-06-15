@@ -5,8 +5,9 @@
         "razor": "html",
         "plaintext": "jade"
     },
-    "emmet.triggerExpansionOnTab":false,
+    "emmet.triggerExpansionOnTab": false,
     "emmet.showSuggestionsAsSnippets": true,
-    "emmet.showAbbreviationSuggestions":true,
-    "editor.formatOnPaste": true
+    "emmet.showAbbreviationSuggestions": true,
+    "editor.formatOnPaste": true,
+
 }
