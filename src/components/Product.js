@@ -1,50 +1,53 @@
-import React, { Component } from 'react'
-import styled from "../../node_modules/styled-components"
-import {Link} from "../../node_modules/react-router-dom"
-import  {ProuductConsumer} from "../Context";
-import PropTypes from  "../../node_modules/prop-types"
+import React, { Component } from "react";
+import styled from "../../node_modules/styled-components/dist/styled-components";
+import { Link } from "../../node_modules/react-router-dom";
+import { ProductConsumer } from "../Context";
+import PropTypes from "../../node_modules/prop-types";
 
 export default class Product extends Component {
   render() {
-   const{id,img ,name,inCart,price,total}=this.props.product
+    const { id, img, name, inCart, price, total } = this.props.product;
     return (
-     <>
-    <div className="col-10 col-md-5 col-lg-3 mx-auto my-2">
-     <Twrapper >
-       <div className="card">
-          <div className="img-container py-2 " onClick={console.log('click me')}>
-              <Link to="/details">
-              <img src={img} className="card-img-top p-5" alt="product"/>
-
-              </Link>
-              <button className="btn cart-btn" disabled={inCart? false:true} onClick={console.log('added to cart')}>
-                {inCart? (<i className="fa fa-shopping-basket " disabled></i>):(<i className="fa fa-cart-plus" disabled></i>)}
-              </button>
-          </div>
-          <div className="card-footer d-flex justify-content-between">
-           <p className="self-align-center">{name}</p> 
-           <h4 className="self-align-end font-italic text-dark">
-          <span className="mr-1">$</span>
-            {price}</h4>
-          </div>
-      </div>
-     </Twrapper>
-     </div>
-     </>
-    )
+      <>
+        <div className="col-10 col-md-5 col-lg-3 mx-auto my-2">
+          <Twrapper>
+            <div className="card">
+              <ProductConsumer>
+                {value => (
+                  <div className="img-container py-2 " onClick={() => value.handleDetail(id)}>
+                    <Link to="/details">
+                      <img src={img} className="card-img-top p-5" alt="product" />
+                    </Link>
+                    <button className="btn cart-btn" disabled={inCart ? false : true} onClick={value.addToCart(id)}>
+                      {inCart ? <i className="fa fa-shopping-basket " disabled /> : <i className="fa fa-cart-plus" disabled />}
+                    </button>
+                  </div>
+                )}
+              </ProductConsumer>
+              <div className="card-footer d-flex justify-content-between">
+                <p className="self-align-center">{name}</p>
+                <h4 className="self-align-end font-italic text-dark">
+                  <span className="mr-1">$</span>
+                  {price}
+                </h4>
+              </div>
+            </div>
+          </Twrapper>
+        </div>
+      </>
+    );
   }
 }
-Product.propTypes={
-  product:PropTypes.shape({
-    id:PropTypes.number,
-    name:PropTypes.string,
-    img:PropTypes.string,
-    price:PropTypes.number,
-    inCart:PropTypes.bool,
-
-  }).isRequired
+Product.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    img: PropTypes.string,
+    price: PropTypes.number,
+    inCart: PropTypes.bool,
+  }).isRequired,
 };
-const Twrapper=styled.section`
+const Twrapper = styled.section`
 display:justify;
 overflow:hidden;
 display:wrap-content;
