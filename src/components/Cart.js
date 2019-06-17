@@ -14,7 +14,7 @@ export default class Cart extends Component {
             return (
               <>
                 <CartColumns />
-                <CartList />
+                <CartList value={value} />
               </>
             );
           } else {
