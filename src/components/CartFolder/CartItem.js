@@ -5,7 +5,7 @@ export default function CartItem({ value, product }) {
 
   return (
     <div>
-      <head>ddd</head>
+      <head>dddioiioioiioiooiooi</head>
     </div>
   );
 }

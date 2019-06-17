@@ -9,7 +9,7 @@ export default class CartList extends Component {
         {value => {
           console.log(value);
           const { cart } = value;
-          cart.map(item => {
+          return cart.map(item => {
             return <CartItem key={item.id} product={item} value={value} />;
           });
         }}
