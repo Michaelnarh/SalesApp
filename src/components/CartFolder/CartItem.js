@@ -20,11 +20,11 @@ export default class CartItem extends Component {
             </div>
             <div className="col-md-2 mx-auto text-center col-lg-2">
               <ul className="d-flex justify-content-center">
-                <span className=" btn btn-black" onClick={() => decrement(id)}>
+                <span className=" box btn btn-black" onClick={() => decrement(id)}>
                   -
                 </span>
                 <span className="mx-3">{count}</span>
-                <span className=" btn btn-black" onClick={() => increment(id)}>
+                <span className=" box btn btn-black" onClick={() => increment(id)}>
                   +
                 </span>
               </ul>

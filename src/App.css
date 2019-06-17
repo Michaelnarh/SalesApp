@@ -3,7 +3,7 @@
   --lightBlue: #45b3eb;
   --mainWhite: rgb(248, 248, 247);
   --mainDark: rgb(23, 33, 3);
-  --mainYellow: rgb(216, 226, 75);
+  --mainYellow: rgb(216, 226, 75s);
   --mainOrange: rgba(235, 96, 53, 0.938);
   --mainRed: rgb(218, 34, 43);
 }
@@ -13,11 +13,11 @@
 }
 
 body {
-  color: var(--mainDark) !important;
+  color: var(--mainDark);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
   /* background-color:var(--mainYellow) !important; */
   background-blend-mode: normal;
-  /* background-image: linear-gradient(to right, var(--mainBlue), var(--mainRed)) */
+  background-image: linear-gradient(to right, var(--mainYellow), var(--mainRed));
 }
 
 .navme {
@@ -67,3 +67,24 @@ body {
 }
 
 .margin-bottom {}
+
+/* the footer image */
+.footer-area {
+  background-image: url("/images/ui_img/home-banner.jpg");
+}
+
+/* increment and decremnt box style*/
+.box {
+  border: 1px var(--mainBlue) solid;
+  border-radius: 2px;
+  display: wrap-content;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: 2px var(--mainDark);
+}
+
+.box:hover {
+  background-color: coral;
+  border-radius: 3px;
+  padding: 8%;
+}
