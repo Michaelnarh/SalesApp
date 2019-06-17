@@ -1,10 +1,11 @@
 :root {
   --mainBlue: hsl(240, 46%, 31%);
   --lightBlue: #45b3eb;
-  --mainwhite: rgb(248, 248, 247);
+  --mainWhite: rgb(248, 248, 247);
   --mainDark: rgb(23, 33, 3);
   --mainYellow: rgb(216, 226, 75);
-  --mainOrange: rgb(250, 97, 8);
+  --mainOrange: rgba(235, 96, 53, 0.938);
+  --mainRed: rgb(218, 34, 43);
 }
 
 .App {
@@ -14,7 +15,9 @@
 body {
   color: var(--mainDark) !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-  background-color: var(--mainwhite) !important;
+  /* background-color:var(--mainYellow) !important; */
+  background-blend-mode: normal;
+  /* background-image: linear-gradient(to right, var(--mainBlue), var(--mainRed)) */
 }
 
 .navme {
@@ -24,7 +27,7 @@ body {
 }
 
 .headme {
-  max-resolution: top 1.8rem;
+  /* max-resolution: top 1.8rem; */
   text-align: end;
   text-emphasis: bold;
   word-spacing: monospace;
@@ -36,5 +39,31 @@ body {
   background-image: url("./logo.svg");
   background-repeat: no-repeat;
   background-position: center;
-  word-spacing: 1.3rem
+  word-spacing: 1.3rem;
+  text-decoration: nones;
+
 }
+
+.Textformat {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: var(var(--mainDark));
+
+
+}
+
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 20px;
+  border-radius: 1px;
+  color: var(--mainDark);
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: .5px solid var(--mainOrange);
+}
+
+.margin-bottom {}

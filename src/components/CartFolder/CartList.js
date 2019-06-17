@@ -1,19 +1,20 @@
-import React, { Component } from "react";
 import { ProductConsumer } from "../../Context";
 import CartItem from "./CartItem";
-
+import React, { Component } from "react";
 export default class CartList extends Component {
   render() {
-    console.log(this.props);
     const { cart } = this.props.value;
+    console.log(this.props.value);
     return (
-      <ProductConsumer>
-        {value => {
-          return cart.map(item => {
-            return <CartItem key={item.id} product={item} value={value} />;
-          });
-        }}
-      </ProductConsumer>
+      <>
+        <ProductConsumer>
+          {value => {
+            return cart.map(cart => {
+              return <CartItem key={cart.id} cart={cart} value={value} />;
+            });
+          }}
+        </ProductConsumer>
+      </>
     );
   }
 }

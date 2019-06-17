@@ -1,30 +1,30 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class CartColumns extends Component {
-  render() {
-    return (
-      <div className="container-fluid my-3">
-        <div className="row text-center">
-          <div className="col-10 mx-auto col-lg-2">
-            <span className="">Image</span>
+export default function CartColumns() {
+  return (
+    <section>
+      <div className="container-fluid mb-5 ">
+        <div className="row text-uppercase">
+          <div className="col-md-2 mx-auto text-center col-lg-2 ">
+            <p>Product</p>
           </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <span className="">Name</span>
+          <div className="col-md-2 mx-auto text-center col-lg-2">
+            <p>Name of product</p>
           </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <span className="">Price</span>
+          <div className="col-md-2 mx-auto text-center col-lg-2">
+            <p>Price</p>
           </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <span className="">Quantity</span>
+          <div className="col-md-2 mx-auto text-center col-lg-2">
+            <p className="justify-content-center">Quantity</p>
           </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <span className="">Remove</span>
+          <div className="col-md-2 mx-auto text-center col-lg-2 ">
+            <p>Remove</p>
           </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <span className="">Total</span>
+          <div className="col-md-2 mx-auto text-center col-lg-2">
+            <p>Total</p>
           </div>
         </div>
       </div>
-    );
-  }
+    </section>
+  );
 }
