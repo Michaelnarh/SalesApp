@@ -7,33 +7,32 @@ import PropTypes from "../../node_modules/prop-types";
 export default class Product extends Component {
   render() {
     const { id, img, name, inCart, price, total } = this.props.product;
+
     return (
       <>
-        <div className="col-10 col-md-5 col-lg-3 mx-auto my-2">
-          <Twrapper>
-            <div className="card">
-              <ProductConsumer>
-                {value => (
-                  <div className="img-container py-2 " onClick={() => value.handleDetail(id)}>
-                    <Link to="/details">
-                      <img src={img} className="card-img-top p-5" alt="product" />
-                    </Link>
-                    <button className="btn cart-btn" disabled={inCart ? false : true} onClick={value.addToCart(id)}>
-                      {inCart ? <i className="fa fa-shopping-basket " disabled /> : <i className="fa fa-cart-plus" disabled />}
-                    </button>
-                  </div>
-                )}
-              </ProductConsumer>
-              <div className="card-footer d-flex justify-content-between">
-                <p className="self-align-center">{name}</p>
-                <h4 className="self-align-end font-italic text-dark">
-                  <span className="mr-1">$</span>
-                  {price}
-                </h4>
-              </div>
+        <Twrapper className="col-9 mx-auto col-md-6 col-lg-3 my-4">
+          <div className="card">
+            <ProductConsumer>
+              {value => (
+                <div className="img-container py-2 " onClick={() => value.handleDetail(id)}>
+                  <Link to="/details">
+                    <img src={img} className="card-img-top p-2" alt={`${id}`} />
+                  </Link>
+                  <button className="btn cart-btn" disabled={inCart ? true : false} onClick={() => value.addToCart(id)}>
+                    {inCart ? <i className="fa fa-shopping-basket " disabled="true" /> : <i className="fa fa-cart-plus" />}
+                  </button>
+                </div>
+              )}
+            </ProductConsumer>
+            <div className="card-footer d-flex justify-content-between">
+              <p className="self-align-center">{name}</p>
+              <h4 className="self-align-end font-italic text-dark">
+                <span className="mr-1">$</span>
+                {price}
+              </h4>
             </div>
-          </Twrapper>
-        </div>
+          </div>
+        </Twrapper>
       </>
     );
   }
@@ -47,7 +46,7 @@ Product.propTypes = {
     inCart: PropTypes.bool,
   }).isRequired,
 };
-const Twrapper = styled.section`
+const Twrapper = styled.div`
 display:justify;
 overflow:hidden;
 display:wrap-content;
@@ -70,7 +69,8 @@ display:wrap-content;
   }
 }
 .img-container:hover .card-img-top {
- transform:scale(1.2);
+ transform:scale(1.1);
+ overflow:hidden;
 }
  
 .cart-btn {

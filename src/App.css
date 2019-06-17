@@ -1,37 +1,40 @@
-:root{
-  --mainBlue:hsl(240, 46%, 31%);
-  --lightBlue:#45b3eb;
-  --mainwhite:rgb(248, 248, 247);
-  --mainDark:rgb(23,33,3);
-  --mainYellow:rgb(216, 226, 75);
+:root {
+  --mainBlue: hsl(240, 46%, 31%);
+  --lightBlue: #45b3eb;
+  --mainwhite: rgb(248, 248, 247);
+  --mainDark: rgb(23, 33, 3);
+  --mainYellow: rgb(216, 226, 75);
+  --mainOrange: rgb(250, 97, 8);
 }
+
 .App {
   text-align: center;
 }
-body{
-  color:var(--mainDark)!important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-  background-color:var(--mainwhite) !important;
-} 
-.navme{
-  opacity: 0.8px;
-  margin-bottom:2px blue solid;
 
-} 
-.headme{
+body {
+  color: var(--mainDark) !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  background-color: var(--mainwhite) !important;
+}
+
+.navme {
+  opacity: 0.8px;
+  margin-bottom: 2px blue solid;
+
+}
+
+.headme {
   max-resolution: top 1.8rem;
   text-align: end;
-  text-emphasis:bold;
+  text-emphasis: bold;
   word-spacing: monospace;
-  margin-top:25px;
+  margin-top: 25px;
   word-spacing: 0.4rem;
-  color:var(--mainBlue);
+  color: var(--mainBlue);
   font-size: 2.3em !important;
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("./logo.svg");
   background-repeat: no-repeat;
   background-position: center;
   word-spacing: 1.3rem
-
-
-}  
+}

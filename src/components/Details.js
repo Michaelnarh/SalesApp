@@ -24,23 +24,25 @@ export default class Details extends Component {
                         <b />
                         <b>{name}</b>
                       </h2>
-                      <div className=" text-capitalize">
+                      <div className=" text-capitalize mt-4">
                         <h5 className="">Some info:</h5>
                         {info}
                       </div>
-                      <div className="text-capitalize">
+                      <div className="text-capitalize mt-4">
                         <b className="mr-2 text-mutted text-center">Made By: </b>
                         {company}
                       </div>
-                      <div className="text-capitalize tex-center">
+                      <div className="text-capitalize mt-4 tex-center">
                         <b className="mr-2 text-mutted">Price: </b>${price}
                       </div>
-                      <Link to="/">
-                        <ButtonContainer className="mr-3">Go back</ButtonContainer>
-                      </Link>
-                      <ButtonContainer disabled={inCart ? true : false} onClick={value.addToCart(id)}>
-                        {inCart ? "inCart" : "add to Cart"}
-                      </ButtonContainer>
+                      <div className="d-flex mt-5">
+                        <Link to="/">
+                          <ButtonContainer className="mr-3">Go Back</ButtonContainer>
+                        </Link>
+                        <ButtonContainer disabled={inCart ? true : false} onClick={() => value.addToCart(id)}>
+                          {inCart ? "inCart" : "Add to Cart"}
+                        </ButtonContainer>
+                      </div>
                     </div>
                   </div>
                 </div>
