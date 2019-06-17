@@ -6,7 +6,7 @@ import PropTypes from "../../node_modules/prop-types";
 
 export default class Product extends Component {
   render() {
-    const { id, img, name, inCart, price, total } = this.props.product;
+    const { id, img, name:productName, inCart, price, total } = this.props.product;
 
     return (
       <>
@@ -19,13 +19,13 @@ export default class Product extends Component {
                     <img src={img} className="card-img-top p-2" alt={`${id}`} />
                   </Link>
                   <button className="btn cart-btn" disabled={inCart ? true : false} onClick={() => value.addToCart(id)}>
-                    {inCart ? <i className="fa fa-shopping-basket " disabled="true" /> : <i className="fa fa-cart-plus" />}
+                    {inCart ? <i className="fa fa-shopping-basket " disabled /> : <i className="fa fa-cart-plus" />}
                   </button>
                 </div>
               )}
             </ProductConsumer>
             <div className="card-footer d-flex justify-content-between">
-              <p className="self-align-center">{name}</p>
+              <p className="self-align-center">{productName}</p>
               <h4 className="self-align-end font-italic text-dark">
                 <span className="mr-1">$</span>
                 {price}

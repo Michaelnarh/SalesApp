@@ -4,24 +4,24 @@ export default class CartColumns extends Component {
   render() {
     return (
       <div className="container-fluid my-3">
-        <div className="row align-items-center">
-          <div className="col-lg-2">
-            <span className="text-center">Image</span>
+        <div className="row text-center">
+          <div className="col-10 mx-auto col-lg-2">
+            <span className="">Image</span>
           </div>
-          <div className="col-lg-2">
-            <span className="text-center">Name</span>
+          <div className="col-10 mx-auto col-lg-2">
+            <span className="">Name</span>
           </div>
-          <div className="col-lg-2">
-            <span className="text-center">Price</span>
+          <div className="col-10 mx-auto col-lg-2">
+            <span className="">Price</span>
           </div>
-          <div className="col-lg-2">
-            <span className="text-center">Quantity</span>
+          <div className="col-10 mx-auto col-lg-2">
+            <span className="">Quantity</span>
           </div>
-          <div className="col-lg-2">
-            <span className="text-center">Remove</span>
+          <div className="col-10 mx-auto col-lg-2">
+            <span className="">Remove</span>
           </div>
-          <div className="col-lg-2">
-            <span className="text-center">Total</span>
+          <div className="col-10 mx-auto col-lg-2">
+            <span className="">Total</span>
           </div>
         </div>
       </div>
