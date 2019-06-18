@@ -95,7 +95,7 @@ class ProductProvider extends Component {
     const index = tempArray.indexOf(this.getItem(id));
     const selected = tempArray[index];
     let subtractor = selected.count;
-    if (selected.count < 1) {
+    if (selected.count <= 0) {
       this.removeItem(id);
     } else {
       selected.count = subtractor - 1;
