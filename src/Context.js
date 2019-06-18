@@ -10,9 +10,9 @@ class ProductProvider extends Component {
     cart: [],
     openModal: true,
     modalProduct: detailProduct,
-    cartsubTotal: 0.0,
-    cartTax: 0.0,
-    grandTotal: 0.0,
+    cartsubTotal: 0,
+    cartTax: 0,
+    grandTotal: 0,
   };
 
   componentDidMount() {
@@ -55,7 +55,6 @@ class ProductProvider extends Component {
       },
       () => {
         this.addTotals();
-        console.log(this.state);
       }
     );
   };
@@ -72,11 +71,13 @@ class ProductProvider extends Component {
   };
   increment = id => {
     let tempCart = [...this.state.cart];
-    // const index = tempCart.indexOf(this.getItem(id));
-    // const selectedItem = tempCart[index];
-    tempCart.count = tempCart.count + 1;
-    console.log(tempCart.count);
-    tempCart.price = tempCart.count * tempCart.price;
+    const index = tempCart.indexOf(this.getItem(id));
+    const selectedItem = tempCart[index];
+    let adder = selectedItem.count;
+    selectedItem.count = adder + 1;
+    selectedItem.total = selectedItem.count * selectedItem.price;
+    // console.log("pricce   " + selectedItem.price + "total   " + selectedItem.total);
+    console.log("the tempCart is ", tempCart, "the total is ", selectedItem.total);
 
     this.setState(
       () => {
@@ -85,70 +86,90 @@ class ProductProvider extends Component {
         };
       },
       () => {
-        this.addToCart();
+        this.addTotals();
       }
     );
-
-    // console.log(cart.count);
   };
   decrement = id => {
-    const cart = this.getItem(id);
-
-    this.setState(() => {
-      if (cart.count > 1) {
-        return (cart.count = --cart.count);
-      }
-    });
+    let tempArray = [...this.state.cart];
+    const index = tempArray.indexOf(this.getItem(id));
+    const selected = tempArray[index];
+    let subtractor = selected.count;
+    if (selected.count < 1) {
+      this.removeItem(id);
+    } else {
+      selected.count = subtractor - 1;
+      selected.total = selected.count * selected.price;
+      this.setState(
+        () => {
+          return {
+            cart: [...tempArray],
+          };
+        },
+        () => {
+          this.addTotals();
+        }
+      );
+    }
   };
 
   removeItem = id => {
-    //   const { cart } = this.getItem(id);
-    //   let tempProduct = [...this.state.product];
-    //   let tempCart = [...this.state.cart];
-    //   tempCart = tempCart.filter(item => item.id !== id);
-    //   const index = tempProduct.indexOf(this.getItem(id));
-    //   let removedItem = tempProduct[index];
-    //   removedItem.inCart = false;
-    //   // removedItem.count = 0;
-    //   // removedItem.total = 0;
-    //   this.setState(() => {
-    //     return {
-    //       product: [...tempProduct],
-    //       cart: [...tempCart],
-    //     };
-    //   }, this.addToCart());
+    const { cart } = this.getItem(id);
+    let tempProduct = [...this.state.product];
+    let tempCart = [...this.state.cart];
+    //remove the item that does not match the id received in the array
+    tempCart = tempCart.filter(item => item.id !== id);
+    //change the the properties of the item in the product
+    const index = tempProduct.indexOf(this.getItem(id));
+    const removedItem = tempProduct[index];
+    console.log(removedItem, " is the removed item");
+    // let { inCart, count, total } = removedItem;
+    // inCart = false;
+    // count = 0;
+    // total = 0;
 
-    //   // cart.hide();
-    //   console.log("remove");
-    // };
-    // clearCart = id => {
-    //   this.setState(
-    //     () => {
-    //       return { cart: [] };
-    //     },
-    //     () => {
-    //       this.setProduct();
-    //     }
-    //   );
+    removedItem.inCart = false;
+    removedItem.count = 0;
+    removedItem.total = 0;
+
+    this.setState(
+      () => {
+        return {
+          product: [...tempProduct],
+          cart: [...tempCart],
+        };
+      },
+      () => {
+        this.addTotals();
+      }
+    );
+  };
+  clearCart = id => {
+    this.setState(
+      () => {
+        return { cart: [] };
+      },
+      () => {
+        this.setProduct();
+      }
+    );
     console.log("clear");
   };
   addTotals() {
-    let subtotals = 0;
-    var total = 0;
-    let tax = 0;
+    let subtotals = 0.0;
+
     this.state.cart.map(item => {
       subtotals += item.total;
-      // sub = parseFloat(subtotals).toFixed(2)
-      tax = subtotals * 0.3;
-      total = subtotals + tax;
-      console.log("subtotals is :" + subtotals);
-      console.log("tax is :" + tax);
-      console.log("grandTotal is :" + total);
+      let tax = subtotals * 0.1;
+      let total = subtotals + tax;
+      // tax = tax.toFixed(2);
+      // total = total.toFixed(2);
+      // subtotals = subtotals.toFixed(2);
       this.setState(() => {
         return {
-          cartsubTotal: parseFloat(subtotals).toFixed(2),
-          cartTax: parseFloat(tax).toFixed(2),
-          grandTotal: parseFloat(total).toFixed(2),
+          cartsubTotal: subtotals,
+          cartTax: tax,
+          grandTotal: total,
         };
       });
     });

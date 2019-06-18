@@ -30,8 +30,8 @@ export default class CartItem extends Component {
               </ul>
             </div>
             <div className="col-md-2 mx-auto text-center col-lg-2 ">
-              <button className="btn" onClick={() => removeItem(id)}>
-                <i className="fa fa-trash " />
+              <button onClick={() => removeItem(id)}>
+                <i className=" btn fa fa-trash" />
               </button>
             </div>
             <div className="col-md-2 mx-auto text-center col-lg-2">
