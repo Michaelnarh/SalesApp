@@ -17,6 +17,7 @@ class ProductProvider extends Component {
 
   componentDidMount() {
     this.setProduct();
+    debugger;
   }
   setProduct = () => {
     let tempProduct = [];

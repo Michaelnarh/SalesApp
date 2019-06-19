@@ -83,8 +83,30 @@ body {
   box-shadow: 2px var(--mainDark);
 }
 
+.fa-trash {
+  color: red;
+  font-size: 25px;
+
+}
+
+.cartTotaltext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-right: 45px;
+  color: var(--mainBlue) !important;
+  display: block;
+  text-emphasis: 1px;
+  text-shadow: rgba(0, 0, 0, .2);
+  -webkit-text-stroke-width: 1px;
+
+}
+
 .box:hover {
   background-color: coral;
   border-radius: 3px;
-  padding: 8%;
+  -moz-user-focus: pointer;
+}
+
+.default {
+  margin-bottom: 100px;
 }

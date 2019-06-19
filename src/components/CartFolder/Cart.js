@@ -12,7 +12,7 @@ export default class Cart extends Component {
   render() {
     return (
       <div>
-        <Title me="Your" u="Cart" />
+        <Title first="Your" second="Cart" />
         <ProductConsumer>
           {value => {
             const { cart } = value;

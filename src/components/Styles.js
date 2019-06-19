@@ -1,8 +1,8 @@
  import  styled from "../../node_modules/styled-components"
  export const Twrapper = styled.section `
-display:justify;
-overflow:hidden;
-display:wrap-content;
+// display:justify;
+// overflow:hidden;
+// display:wrap-content;s
 .card{
   border-color:transparent;
   transition : all 1s linear;

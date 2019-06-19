@@ -16,7 +16,10 @@ export default class CartItem extends Component {
               <p className="">{name}</p>
             </div>
             <div className="col-md-2 mx-auto text-center col-lg-2">
-              <p>{price}</p>
+              <p>
+                ${"   "}
+                {price}
+              </p>
             </div>
             <div className="col-md-2 mx-auto text-center col-lg-2">
               <ul className="d-flex justify-content-center">
@@ -31,11 +34,14 @@ export default class CartItem extends Component {
             </div>
             <div className="col-md-2 mx-auto text-center col-lg-2 ">
               <button onClick={() => removeItem(id)} className="btn">
-                <i className=" fa fa-trash" />
+                <i className=" fa fa-trash " title="remove item from cart" />
               </button>
             </div>
             <div className="col-md-2 mx-auto text-center col-lg-2">
-              <p>{total}</p>
+              <p>
+                ${"  "}
+                {total.toFixed(2)}
+              </p>
             </div>
           </div>
         </div>

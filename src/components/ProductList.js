@@ -8,7 +8,7 @@ export default class ProductList extends Component {
   render() {
     return (
       <>
-        <Title me="OUR" u="PRODUCTS" />
+        <Title first="OUR" second="PRODUCTS" />
 
         <div className="row">
           <div>

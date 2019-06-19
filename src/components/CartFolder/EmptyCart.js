@@ -5,11 +5,13 @@ export default function EmptyCart() {
     <div>
       <div className="container">
         <div className="row">
-          <div className="col-10 mt-5 ">
-            <h1 className="text-center text-blue"> Cart is currently Empty</h1>
+          <div className="mx-auto mt-5 ">
+            <h3 className="text-center">Oooooohps....</h3>
+            <h1 className="text-center ml-2"> Cart is Currently Empty</h1>
           </div>
         </div>
       </div>
+      <div className="default">-</div>
     </div>
   );
 }
