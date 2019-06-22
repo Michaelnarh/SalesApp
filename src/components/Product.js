@@ -9,7 +9,7 @@ export default class Product extends Component {
     const { id, img, name, inCart, price } = this.props.product;
     return (
       <>
-        <div className="row">
+        <table className="table">
           <Twrapper className="col-9 mx-auto col-md-6 col-lg-3 my-2">
             <div className="card">
               <ProductConsumer>
@@ -46,7 +46,7 @@ export default class Product extends Component {
               </div>
             </div>
           </Twrapper>
-        </div>
+        </table>
       </>
     );
   }
