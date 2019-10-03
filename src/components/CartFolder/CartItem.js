@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CartTotals from "./CartTotals";
 export default class CartItem extends Component {
   render() {
     const { id, count, img, price, total, name } = this.props.cart;

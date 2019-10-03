@@ -4,7 +4,7 @@ export default function CartColumns() {
   return (
     <section>
       <div className="container-fluid mb-5 ">
-        <div className="row text-uppercase">
+        <div className="row text-uppercase text-bold">
           <div className="col-md-2 mx-auto text-center col-lg-2 ">
             <p>Product</p>
           </div>

@@ -17,7 +17,7 @@ class ProductProvider extends Component {
 
   componentDidMount() {
     this.setProduct();
-    debugger;
+    // debugger;
   }
   setProduct = () => {
     let tempProduct = [];
@@ -96,7 +96,7 @@ class ProductProvider extends Component {
     const index = tempArray.indexOf(this.getItem(id));
     const selected = tempArray[index];
     let subtractor = selected.count;
-    if (selected.count <= 0) {
+    if (selected.count <= 1) {
       this.removeItem(id);
     } else {
       selected.count = subtractor - 1;
@@ -115,7 +115,7 @@ class ProductProvider extends Component {
   };
 
   removeItem = id => {
-    const { cart } = this.getItem(id);
+    // const { cart } = this.getItem(id);
     let tempProduct = [...this.state.product];
     let tempCart = [...this.state.cart];
     //remove the item that does not match the id received in the array
@@ -173,6 +173,7 @@ class ProductProvider extends Component {
           grandTotal: total,
         };
       });
+      return 0;
     });
   }
 
