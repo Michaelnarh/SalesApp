@@ -9,7 +9,7 @@ export default class Product extends Component {
     const { id, img, name, inCart, price } = this.props.product;
     return (
       <>
-        <Twrapper className="col-9 mx-auto col-md-6 col-lg-3 my-2">
+        <Twrapper className="">
           <div className="card">
             <ProductConsumer>
               {value => (
@@ -25,13 +25,17 @@ export default class Product extends Component {
                   </Link>
                   <button
                     className="btn cart-btn"
-                    disabled={inCart ? true : false}
+                    disabled={!!inCart}
                     onClick={() => {
                       value.addToCart(id);
                       value.openModal(id);
                     }}
                   >
-                    {inCart ? <i className="fa fa-shopping-basket " disabled /> : <i className="fa fa-cart-plus" disabled />}
+                    {inCart ? (
+                      <i className="fa fa-shopping-basket fa-sm" disabled />
+                    ) : (
+                      <i className="fa fa-cart-plus fa-sm" disabled />
+                    )}
                   </button>
                 </div>
               )}

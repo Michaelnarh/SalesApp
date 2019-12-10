@@ -1,4 +1,4 @@
-import styled from "../../node_modules/styled-components";
+import styled from '../../node_modules/styled-components'
 export const Twrapper = styled.section`
 // display:justify;
 // overflow:hidden;
@@ -14,7 +14,8 @@ export const Twrapper = styled.section`
 }
 &:hover{
   .card{
-    border:0.4rem solid rgba(0,0,0,0.2);
+    border-bottom:4px solid rgba(0,0,0,0.2);
+    border-left:4px solid rgba(0,0,0,0.2);
     box-shadow:1px 1px 3px rgba(0,0,0,0.2);
   }
   .card-footer{
@@ -32,12 +33,12 @@ export const Twrapper = styled.section`
     bottom:0;
     right:0;
     padding:0.2rem 0.4rem
+    border-radius:0.5rem 1 1 0;
     background:var(--mainOrange);
-    margin-left:10em;
-    margin-bottom:2em; 
+    margin-left:208px;
+    margin-bottom:35px; 
     color:var(--mainwhite);
     font-size:1.4rem
-    border-radius:0.5rem 1 1 0;
     transform:translate(100%, 100%);
     transition:all 1s linear
    
@@ -50,7 +51,7 @@ export const Twrapper = styled.section`
     color:var(--lightBlue)
 
   }
-`;
+`
 
 export const ButtonContainer = styled.button`
   border-radius: 0.4rem;
@@ -59,18 +60,18 @@ export const ButtonContainer = styled.button`
   texttext-positon: center;
   text-decoration-style: unset;
   text-underline: none;
-  border-color: ${props => (props.cart ? "var(--mainOrange)" : "var(--lightBlue)")};
+  border-color: ${props => (props.cart ? 'var(--mainOrange)' : 'var(--lightBlue)')};
   background: transparent;
   width: 140px;
   height: 50px;
   &:hover {
-    background: ${props => (props.cart ? "var(--mainOrange)" : "var(--lightBlue)")};
+    background: ${props => (props.cart ? 'var(--mainOrange)' : 'var(--lightBlue)')};
     scale: 0.2;
     text-transform: italic;
     color: var(--mainWhite);
     text-decoration-style: none;
   }
-`;
+`
 export const ModalContainer = styled.div`
 position:fixed;
 top:0;
@@ -86,4 +87,4 @@ justify-content:center;
 
 }
 
-`;
+`

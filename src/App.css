@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --mainBlue: hsl(240, 46%, 31%);
   --lightBlue: #45b3eb;
@@ -10,6 +14,12 @@
 
 .App {
   text-align: center;
+}
+
+.margin-row {
+  margin-left: 50px;
+  margin-right: 50px;
+
 }
 
 body {
@@ -108,4 +118,28 @@ body {
 
 .default {
   margin-bottom: 100px;
+}
+
+.product-list {
+  width: 80vw;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+  /* display: grid; */
+  /* grid-template-columns: 3fr; */
+  /* grid-template-columns: repeat(auto-fill, minmax(270px, 4fr)); */
+  /* grid-row-gap: 2rem; */
+  /* grid-column-gap: 30px; */
+}
+
+.product-list-center {
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  /* grid-template-columns: 3fr; */
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 30px;
 }

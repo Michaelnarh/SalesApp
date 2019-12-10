@@ -18,13 +18,7 @@ const Footer = () => {
                 <h6>Newsletter</h6>
                 <p>Stay update with our latest</p>
                 <div className="" id="mc_embed_signup">
-                  <form
-                    target="_blank"
-                    novalidate="true"
-                    action="https://rallycoding.herokuapp.com/user/michaelnarh"
-                    method="get"
-                    className="form-inline"
-                  >
+                  <form target="_blank" method="get" className="form-inline">
                     <div className="d-flex flex-row">
                       <input type="text" placeholder="Email" className="text-center" />
                       <button className="click-btn btn btn-default">
@@ -39,16 +33,7 @@ const Footer = () => {
             <div className="col-lg-3  col-md-6 col-sm-6">
               <div className="single-footer-widget mail-chimp">
                 <h6 className="mb-20">Instragram Feed</h6>
-                <ul className="instafeed d-flex flex-wrap">
-                  <li />
-                  <li />
-                  <li />
-                  <li />
-                  <li />
-                  <li />
-                  <li />
-                  <li />
-                </ul>
+                <ul className="instafeed d-flex flex-wrap"></ul>
               </div>
             </div>
             <div className="col-lg-2 col-md-6 col-sm-6">
