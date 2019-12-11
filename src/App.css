@@ -23,11 +23,16 @@
 }
 
 body {
-  color: var(--mainDark);
+  /* color: var(--mainDark); */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
   /* background-color:var(--mainYellow) !important; */
   background-blend-mode: normal;
-  background-image: linear-gradient(to right, var(--mainYellow), var(--mainRed));
+  background-image: linear-gradient(to right, red, orange);
+}
+
+.fixed-bottom {
+  position: absolute;
+  bottom: auto;
 }
 
 .navme {
@@ -111,9 +116,9 @@ body {
 }
 
 .box:hover {
+  cursor: pointer;
   background-color: coral;
   border-radius: 3px;
-  cursor: hand;
 }
 
 .default {

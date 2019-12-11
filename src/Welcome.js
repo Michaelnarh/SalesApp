@@ -28,29 +28,50 @@ export default class Welcome extends Component {
 
   submitForm = e => {
     const { email, password } = this.state;
-    e.preventDefault();
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(authUser => {
-        this.props.histroy.push("/");
+        this.setState({ isLogin: true, username: "", password: "", email: "" });
+        this.props.history.push("/login");
       })
-      .catch(() => {
-        console.log(" problem with credentials");
+      .catch(err => {
+        console.log(" problem with credentials" + err.toString());
       });
-    // firebase
-    //   .auth()
-    //   .createUserWithEmailAndPassword(email, password)
-    //   .catch(() => {
-    //     this.setState({ errorMsg: "Check your email or your password" });
-    //   });
+    e.preventDefault();
+  };
+  handleLogin = e => {
+    const { email, password } = this.state;
+
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(authUser => {
+        this.setState({ isLogin: true, username: "", password: "", email: "" });
+        this.props.history.push("/login");
+      })
+      .catch(err => {
+        console.log(" problem with credentials" + err.toString());
+      });
+    e.preventDefault();
+  };
+  handleSignout = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(u => {
+        this.props.history.push("/");
+      })
+      .catch(err => {
+        console.log(err + "problem");
+      });
   };
   render() {
     const { username, password, email } = this.state;
     return (
       <>
         <div className="container mt-5">
-          <form onSubmit={this.submitForm}>
+          <form>
             <div className="form-group ">
               <input
                 type="text"
@@ -76,16 +97,30 @@ export default class Welcome extends Component {
                 type="text"
                 className="form-control"
                 placeholder="password"
-                secureEntry
                 onChange={e => this.handleTextChange(e)}
                 name="password"
                 value={password}
               />
             </div>
-            <button className="btn btn-primary btn-outline-light form-contrl" type="submit">
-              submit
+            <button onClick={this.submitForm} className="btn btn-primary btn-outline-light form-contrl" type="submit">
+              signUp
+            </button>
+            <button onClick={this.handleLogin} className="btn btn-primary btn-outline-light form-contrl" type="submit">
+              LogIn
             </button>
           </form>
+          <div className="container text-success">
+            {this.state.isLogin ? (
+              <>
+                {" "}
+                <h4>
+                  am login <button onClick={this.handleSignout}>signout</button>{" "}
+                </h4>
+              </>
+            ) : (
+              "hemm"
+            )}
+          </div>
         </div>
       </>
     );

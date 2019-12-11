@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Paypal from "./PaypalButton";
 export default class CartItem extends Component {
   render() {
     const { id, count, img, price, total, name } = this.props.cart;

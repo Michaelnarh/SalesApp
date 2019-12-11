@@ -1,4 +1,5 @@
 import React from "react";
+import PaypalButton from "./PaypalButton";
 
 export default function CartTotals({ value }) {
   const { cartsubTotal, grandTotal, cartTax } = value;
@@ -18,9 +19,13 @@ export default function CartTotals({ value }) {
             <span className="mr-2">GrandTotal:</span>
             <strong>${grandTotal.toFixed(2)}</strong>
           </ul>
+          <div className="ml-2">
+            <PaypalButton cartTotal={89} history currency="GH" />
+          </div>
         </div>
       </div>
-      <div className="default">-</div>
+
+      {/* <div className="default">kdjjfdjfjlkadjslkjflkjlkajdlkfjlkajdlfjlkajdffljlkasjfdlkfljaf</div> */}
     </>
   );
 }

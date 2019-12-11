@@ -12,6 +12,23 @@ import "./App.css";
 import Footer from "./components/Footer";
 
 class App extends Component {
+  state = {
+    isLogin: false,
+  };
+  // componentDidMount() {
+  //   // Your web app's Firebase configuration
+  //   var firebaseConfig = {
+  //     apiKey: "AIzaSyCNZxUxSTahU7fz80mgT9Isk2DjNKbITSA",
+  //     authDomain: "orbital-ethos-239204.firebaseapp.com",
+  //     databaseURL: "https://orbital-ethos-239204.firebaseio.com",
+  //     projectId: "orbital-ethos-239204",
+  //     storageBucket: "orbital-ethos-239204.appspot.com",
+  //     messagingSenderId: "1025630727120",
+  //     appId: "1:1025630727120:web:4d7c50f61a1edb74",
+  //   };
+  //   // Initialize Firebase
+  //   firebase.initializeApp(firebaseConfig);
+  // }
   render() {
     return (
       <>
